@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <NuxtLayout >
     <h2>userPage</h2>
     <nuxt-child /><!-- 子路由出口：index、userInfo -->
-  </div>
+  </NuxtLayout>
 </template>
 <script>
   export default {
@@ -16,4 +16,6 @@
     methods: {},
   }
 </script>
-<style></style>
+<style>
+  
+</style>

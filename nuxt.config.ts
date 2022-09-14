@@ -18,5 +18,25 @@ export default defineNuxtConfig({
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  plugins: ['~/plugins/request']
+  plugins: ['~/plugins/request'],
+  css: [
+    '~/assets/style/index.less'
+  ],
+  // modules: [
+  //   '@nuxtjs/style-resources'
+  // ],
+  // styleResources: {
+  //   less: './assets/style/theme.less'
+  // },
+  vite: {
+    css: {
+        preprocessorOptions: {
+            less: {
+              charset: false,
+              additionalData: '@import "@/assets/style/theme.less";',
+            },
+
+        },
+    },
+}
 })

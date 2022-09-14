@@ -1,3 +1,5 @@
+
+
 # index
 
 ### context 变量的可用属性
@@ -21,4 +23,26 @@
 | error                | Function        | 客户端 & 服务端 | 用这个方法展示错误页：error(params) 。params 参数应该包含 statusCode 和 message 字段 |
 | nuxtState            | Object          | 客户端          | Nuxt 状态，在使用 beforeNuxtRender 之前，用于客户端获取 Nuxt 状态，仅在 universal 模式下可用 |
 | beforeNuxtRender(fn) | Function        | 服务端          | 使用此方法更新 **NUXT** 在客户端呈现的变量，fn 调用 (可以是异步) { Components, nuxtState } ，参考 示例 |
+
+
+
+
+
+
+
+### 生命周期
+
+| 钩子函数      | 说明                 | server | client |
+| ------------- | -------------------- | ------ | ------ |
+| beforeCreate  |                      | ✔      | ✔      |
+| created       | 在实例创建完成后调用 | ✔      | ✔      |
+| beforeMount   |                      | ❌      | ✔      |
+| mounted       |                      | ❌      | ✔      |
+| beforeUpdate  |                      | ❌      | ✔      |
+| updated       |                      | ❌      | ✔      |
+| activated     |                      | ❌      | ✔      |
+| deactivated   |                      | ❌      | ✔      |
+| beforeDestroy |                      | ❌      | ✔      |
+| destroyed     |                      | ❌      | ✔      |
+| errorCaptured |                      | ✔      | ✔      |
 

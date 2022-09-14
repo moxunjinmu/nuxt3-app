@@ -1,0 +1,28 @@
+/*
+ * @Author: wuwenjia
+ * @Date: 2022-09-14 16:37:27
+ * @FilePath: \nuxt3-app\assets\css\man.less
+ * @Description: 公共样式
+ * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
+ */
+
+/*单行溢出，超出部分显示...或者截取。前提必须有宽度*/
+.gloabl-ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 单行显示省略
+.text-overflow-hidden{
+  &:extend(.gloabl-ellipsis);
+  white-space: nowrap; 
+}
+
+// 多行显示省略
+.multiple-text-overflow-hidden{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break:break-all;
+  overflow: hidden;
+}

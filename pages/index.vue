@@ -1,6 +1,14 @@
+<!--
+ * @Author: wuwenjia
+ * @Date: 2022-09-09 09:12:40
+ * @FilePath: \nuxt3-app\pages\index.vue
+ * @Description: 
+ * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
+-->
 <template>
   <div>
     <h2>hello nuxt.js</h2>
+    <span>index page</span>
   </div>
 </template>
 
