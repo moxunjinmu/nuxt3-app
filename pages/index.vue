@@ -6,10 +6,10 @@
  * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
 -->
 <template>
-  <div>
+  <nuxt-layout>
     <h2>hello nuxt.js</h2>
     <span>index page</span>
-  </div>
+  </nuxt-layout>
 </template>
 
 <script>

@@ -1,3 +1,10 @@
+<!--
+ * @Author: wuwenjia
+ * @Date: 2022-09-09 10:09:51
+ * @FilePath: \nuxt3-app\pages\user\index.vue
+ * @Description: 
+ * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
+-->
 <template>
   <div>
     <h3>userIndex</h3>
