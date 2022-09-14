@@ -1,7 +1,7 @@
 /*
  * @Author: wuwenjia
  * @Date: 2022-09-14 16:37:27
- * @FilePath: \nuxt3-app\assets\css\man.less
+ * @FilePath: \nuxt3-app\assets\style\main.less
  * @Description: 公共样式
  * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
  */
@@ -20,4 +20,35 @@
   -webkit-line-clamp: 2;
   word-break: break-all;
   overflow: hidden;
+}
+.overflow-y-auto {
+  overflow: hidden;
+  overflow-y: auto;
+}
+.flex-vertical-center,
+.column-vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.column-vertical-center {
+  flex-direction: column;
+}
+.flex-between-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-wrap-start {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.card-box-animation {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-box-animation:hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 8px rgba(138, 141, 148, 0.4);
 }

@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   css: [
     '~/assets/style/index.less'
   ],
+  // nuxt3暂不支持style-resources
   // modules: [
   //   '@nuxtjs/style-resources'
   // ],

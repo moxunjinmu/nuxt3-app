@@ -1,7 +1,7 @@
 /*
  * @Author: wuwenjia
  * @Date: 2022-09-14 16:37:27
- * @FilePath: \nuxt3-app\assets\css\man.less
+ * @FilePath: \nuxt3-app\assets\style\main.less
  * @Description: 公共样式
  * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
  */
@@ -25,4 +25,42 @@
   -webkit-line-clamp: 2;
   word-break:break-all;
   overflow: hidden;
+}
+// 竖向滚动
+.overflow-y-auto{
+  overflow: hidden;
+  overflow-y: auto;
+}
+// flex垂直居中
+.flex-vertical-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// 主轴为column的水平垂直居中
+.column-vertical-center{
+  &:extend(.flex-vertical-center);
+  flex-direction: column;
+}
+// flex 两端对齐垂直居中
+.flex-between-center{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+// flex 靠左换行自适应布局
+.flex-wrap-start{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+// hover悬浮动画
+.card-box-animation{
+  transition: transform .2s, box-shadow .2s;
+}
+.card-box-animation:hover {
+  transition: transform .2s, box-shadow .2s;
+  transform:translateY(-4px);
+  box-shadow: 0px 4px 8px rgba(138, 141, 148, .4);
 }
