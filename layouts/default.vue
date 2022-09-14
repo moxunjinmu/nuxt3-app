@@ -1,6 +1,13 @@
+<!--
+ * @Author: moxunjingmu
+ * @Date: 2022-09-14 23:29:21
+ * @FilePath: \nuxt3-app\layouts\default.vue
+ * @Description: 
+ * Copyright (c) 2022 by moxunjingmu 1786471868@qq.com, All Rights Reserved. 
+-->
 <template>
   <div class="page-default">
-    <Header />
+    <PageHeader />
     <section class="page-main">
       <Menu></Menu>
       <!-- 页面出口，类似于子路由出口 -->
@@ -18,5 +25,10 @@
     &:extend(.flex-between-center);
     height: 100%;
     width: 100%;
+    .page-body{
+      width: 100%;
+      height: 100%;
+      padding: @padding;
+    }
   }
 </style>

@@ -20,7 +20,8 @@ export default defineNuxtConfig({
   },
   plugins: ['~/plugins/request'],
   css: [
-    '~/assets/style/index.less'
+    '~/assets/style/index.less',
+    '~/assets/style/main.less',    
   ],
   // nuxt3暂不支持style-resources
   // modules: [
@@ -32,9 +33,12 @@ export default defineNuxtConfig({
   vite: {
     css: {
         preprocessorOptions: {
+            // css: {
+            //   additionalData: '@import "@/assets/style/main.css";',
+            // },
             less: {
               charset: false,
-              additionalData: '@import "@/assets/style/theme.less";',
+              additionalData: ['@import "@/assets/style/index.less";'],
             },
 
         },
