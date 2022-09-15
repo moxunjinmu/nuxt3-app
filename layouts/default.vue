@@ -8,8 +8,8 @@
 <template>
   <div class="page-default">
     <PageHeader />
+    <Menu></Menu>
     <section class="page-main">
-      <Menu></Menu>
       <!-- 页面出口，类似于子路由出口 -->
       <div class="page-body">
         <slot />
@@ -25,6 +25,8 @@
     &:extend(.flex-between-center);
     height: 100%;
     width: 100%;
+    padding-left: @sidebar-width-small;
+    padding-top: @bannerHeight;
     .page-body{
       width: 100%;
       height: 100%;

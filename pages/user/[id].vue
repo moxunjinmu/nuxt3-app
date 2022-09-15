@@ -10,18 +10,20 @@
     <!-- 动态路由页面 可以使用[param] 的方式 -->
     <!-- <span>{{$route.params.group}}</span> -->
     <span>{{$route.params.id}}</span>
+    <title>{{data.data.pageTitle}}</title>
+    <div>{{data.data.pageInfo}}</div>
+    <!-- <div>{{stats}}</div> -->
   </div>
 </template>
-<script>
-  export default {
-    name: "userId",
-    data() {
-      return {}
-    },
-    watch: {},
-    created() {},
-    mounted() {},
-    methods: {},
-  }
+<script setup lang="ts">
+  // 获取运行时配置
+  const config = useRuntimeConfig()
+  // 获取服务端api结果
+  const {data}  = await useFetch('/api/static');
+  // const { data:stats } = await useAsyncData( 'stats', () => $fetch( config.BASE_URL+'/stats') );
+  // console.log('stats',stats);
+  
 </script>
-<style></style>
+<style>
+
+</style>

@@ -6,9 +6,9 @@
  * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
 -->
 <template>
-  <div class="page-header">
+  <header class="page-header">
 
-  </div>
+  </header>
 </template>
 <script>
   export default {
@@ -24,8 +24,11 @@
 </script>
 <style lang="less">
 .page-header{
-  height: 80px;
+  height: @bannerHeight;
   width: 100%;
   box-shadow: 0px 4px 12px #ccc;
+  position: fixed;
+  left: 0;
+  width: 100%;
 }
 </style>

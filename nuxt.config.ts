@@ -2,6 +2,9 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  publicRuntimeConfig: {
+    BASE_URL: process.env.BASE_URL,
+  },
   typescript: {
     shim: false
   },
@@ -18,11 +21,11 @@ export default defineNuxtConfig({
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  plugins: ['~/plugins/request'],
-  css: [
-    '~/assets/style/index.less',
-    '~/assets/style/main.less',    
-  ],
+  //main插件用于引入vue main.ts内容
+  plugins: ['~/plugins/request','~/plugins/main'],
+  // css: [
+  //   '~/assets/style/common/index.less'
+  // ],
   // nuxt3暂不支持style-resources
   // modules: [
   //   '@nuxtjs/style-resources'
@@ -38,10 +41,10 @@ export default defineNuxtConfig({
             // },
             less: {
               charset: false,
-              additionalData: ['@import "@/assets/style/index.less";'],
+              additionalData: ['@import "@/assets/style/common/index.less";'],
             },
 
         },
     },
-}
+  }
 })

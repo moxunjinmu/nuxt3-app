@@ -1,73 +1,19 @@
 /*
  * @Author: wuwenjia
+ * @Date: 2022-09-14 16:43:03
+ * @FilePath: \nuxt3-app\assets\style\common\theme.less
+ * @Description: 
+ * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
+ */
+/*
+ * @Author: wuwenjia
  * @Date: 2022-09-14 16:24:43
- * @FilePath: \nuxt3-app\assets\style\global.less
+ * @FilePath: \nuxt3-app\assets\style\common\global.less
  * @Description: 页面全局基础样式
  * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
  */
 /* 把我们所有标签的内外边距清零 */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-font,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -75,6 +21,10 @@ td {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+}
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 /* em 和 i 斜体的文字都不倾斜 */
@@ -128,4 +78,64 @@ body {
 }
 .clearfix {
   *zoom: 1;
+}
+/*
+ * @Author: wuwenjia
+ * @Date: 2022-09-14 16:37:27
+ * @FilePath: \nuxt3-app\assets\style\main.less
+ * @Description: 公共样式
+ * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
+ */
+/*单行溢出，超出部分显示...或者截取。前提必须有宽度*/
+.gloabl-ellipsis,
+.text-overflow-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-overflow-hidden {
+  white-space: nowrap;
+}
+.multiple-text-overflow-hidden {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  overflow: hidden;
+}
+.overflow-y-auto {
+  overflow: hidden;
+  overflow-y: auto;
+}
+.flex-vertical-center,
+.column-vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.column-vertical-center {
+  flex-direction: column;
+}
+.flex-between-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-wrap-start {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.card-box-animation {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-box-animation:hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 8px rgba(138, 141, 148, 0.4);
+}
+#demoApp {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.5s;
 }

@@ -1,0 +1,55 @@
+/*
+ * @Author: wuwenjia
+ * @Date: 2022-09-14 16:24:43
+ * @FilePath: \nuxt3-app\assets\style\common\global.less
+ * @Description: 页面全局基础样式
+ * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
+ */
+/* 把我们所有标签的内外边距清零 */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+/* em 和 i 斜体的文字都不倾斜 */
+em,
+i {
+  font-style: normal;
+}
+/* 去掉每个li前面的小圆点 */
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+  /* 为了照顾低版本浏览器,如果 图片的外面包含了链接 会出现边框的问题 */
+  vertical-align: middle /* 解决图片底侧出现空白缝隙的问题 */;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+.hide,
+.none {
+  display: none;
+}
+/* 清除浮动 */
+.clearfix:after {
+  visibility: hidden;
+  clear: both;
+  display: block;
+  content: ".";
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
