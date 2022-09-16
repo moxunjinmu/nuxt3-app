@@ -36,9 +36,6 @@ export default defineNuxtConfig({
   vite: {
     css: {
         preprocessorOptions: {
-            // css: {
-            //   additionalData: '@import "@/assets/style/main.css";',
-            // },
             less: {
               charset: false,
               additionalData: ['@import "@/assets/style/common/index.less";'],
