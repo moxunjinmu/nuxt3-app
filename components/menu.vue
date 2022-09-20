@@ -40,15 +40,6 @@ const currentRoute = route.currentRoute.value;
   top: @bannerHeight;
   z-index: @z-index-sidebar;
   padding: 0 32px 96px;
-  // // width: calc(100vw - 64px);
-  // // max-width: @sidebar-width-mobile;
-  // opacity: 0;
-  // background-color: @background;
-  // box-shadow: @box-shadow-3;
-  // overflow-x: hidden;
-  // overflow-y: auto;
-  // transform: translate(-100%);
-  // transition: background-color .5s,opacity .5s,transform .3s ease;
   #pageSidebarNav{
     padding-top: 24px;
     outline: 0;

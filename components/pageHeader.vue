@@ -7,7 +7,16 @@
 -->
 <template>
   <header class="page-header">
-
+    <nuxt-link to="/" ></nuxt-link>
+    <nav class="nav">
+      <div class="spacer"></div>
+      <div class="right">
+        <a href="/Blog">
+          <span>Blog</span>
+        </a>
+        <a href="https://github.com/moxunjinmu" i-carbon-logo-github target="_blank"></a>
+      </div>
+    </nav>
   </header>
 </template>
 <script>
@@ -24,11 +33,14 @@
 </script>
 <style lang="less">
 .page-header{
-  height: @bannerHeight;
   width: 100%;
   box-shadow: 0px 4px 12px #ccc;
-  position: fixed;
-  left: 0;
   width: 100%;
+  .nav{
+    padding: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto max-content;
+  }
 }
 </style>

@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         content: 'my website description'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   //main插件用于引入vue main.ts内容
   plugins: ['~/plugins/request','~/plugins/main'],
@@ -40,7 +40,6 @@ export default defineNuxtConfig({
               charset: false,
               additionalData: ['@import "@/assets/style/common/index.less";'],
             },
-
         },
     },
   }
