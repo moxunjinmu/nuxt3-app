@@ -1,70 +1,17 @@
-/* 把我们所有标签的内外边距清零 */
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-/* em 和 i 斜体的文字都不倾斜 */
-em,
-i {
-  font-style: normal;
-}
-/* 去掉每个li前面的小圆点 */
-li {
-  list-style: none;
-}
-img {
-  border: 0;
-  /* 为了照顾低版本浏览器,如果 图片的外面包含了链接 会出现边框的问题 */
-  vertical-align: middle /* 解决图片底侧出现空白缝隙的问题 */;
-}
-button {
-  cursor: pointer /* 当我们鼠标经过button按钮时,鼠标变成小手的样子 */;
-}
-a {
-  color: #666;
-  text-decoration: none;
-}
-a:hover {
-  color: #c81623;
-}
-button,
-input {
-  font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
-}
-body {
-  /* 抗锯齿性,避免文字被放大后会产生锯齿 */
-  -webkit-font-smoothing: antialiased;
-  background-color: #fff;
-  /* 12px/1.5 表示所有字体的大小为12px,1.5倍的行高 */
-  /* "\5B8B\4F53" 代表的是宋体，用这种方式，浏览器的兼容性会比较好。 把中文字体的名称用相应的Unicode编码来代替，这样就可以有效地避免浏览器解释CSS代码时出现乱码的情况*/
-  font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
-  color: #666;
-}
-.hide,
-.none {
-  display: none;
-}
-/* 清除浮动 */
-.clearfix:after {
-  visibility: hidden;
-  clear: both;
-  display: block;
-  content: ".";
-  height: 0;
-}
-.clearfix {
-  *zoom: 1;
-}
+/*
+ * @Author: wuwenjia
+ * @Date: 2022-09-14 16:43:03
+ * @FilePath: \nuxt3-app\assets\style\common\theme.less
+ * @Description: 
+ * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
+ */
+/*
+ * @Author: wuwenjia
+ * @Date: 2022-09-14 16:37:27
+ * @FilePath: \nuxt3-app\assets\style\common\main.less
+ * @Description: 公共样式
+ * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
+ */
 /*单行溢出，超出部分显示...或者截取。前提必须有宽度*/
 .gloabl-ellipsis,
 .text-overflow-hidden {
@@ -111,6 +58,87 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
   transform: translateY(-4px);
   box-shadow: 0px 4px 8px rgba(138, 141, 148, 0.4);
+}
+.underline-hover,
+a {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  color: #1B1B1C;
+}
+.underline-hover:before,
+a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background: #4285f4;
+  transform: scale(0);
+  transition: all 0.3s;
+}
+.underline-hover:hover,
+a:hover {
+  color: #4285f4;
+}
+.underline-hover:hover:before,
+a:hover:before {
+  transform: scale(1);
+}
+/*
+ * @Author: wuwenjia
+ * @Date: 2022-09-14 16:24:43
+ * @FilePath: \nuxt3-app\assets\style\common\global.less
+ * @Description: 页面全局基础样式
+ * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
+ */
+/* 把我们所有标签的内外边距清零 */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+/* em 和 i 斜体的文字都不倾斜 */
+em,
+i {
+  font-style: normal;
+}
+/* 去掉每个li前面的小圆点 */
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+  /* 为了照顾低版本浏览器,如果 图片的外面包含了链接 会出现边框的问题 */
+  vertical-align: middle /* 解决图片底侧出现空白缝隙的问题 */;
+}
+a {
+  text-decoration: none;
+}
+.hide,
+.none {
+  display: none;
+}
+/* 清除浮动 */
+.clearfix:after {
+  visibility: hidden;
+  clear: both;
+  display: block;
+  content: ".";
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
 }
 #demoApp {
   display: flex;

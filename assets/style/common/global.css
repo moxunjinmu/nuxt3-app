@@ -35,7 +35,6 @@ img {
   vertical-align: middle /* 解决图片底侧出现空白缝隙的问题 */;
 }
 a {
-  color: #666;
   text-decoration: none;
 }
 .hide,

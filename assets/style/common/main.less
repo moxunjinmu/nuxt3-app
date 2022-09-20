@@ -1,11 +1,11 @@
 /*
  * @Author: wuwenjia
  * @Date: 2022-09-14 16:37:27
- * @FilePath: \nuxt3-app\assets\style\main.less
+ * @FilePath: \nuxt3-app\assets\style\common\main.less
  * @Description: 公共样式
  * Copyright (c) 2022 by wuwenjia wuwenjia@aegis-data.cn, All Rights Reserved. 
  */
-
+ @import './theme.less';
 /*单行溢出，超出部分显示...或者截取。前提必须有宽度*/
 .gloabl-ellipsis{
   overflow: hidden;
@@ -63,4 +63,30 @@
   transition: transform .2s, box-shadow .2s;
   transform:translateY(-4px);
   box-shadow: 0px 4px 8px rgba(138, 141, 148, .4);
+}
+
+// hover下划线动画
+.underline-hover{
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  color: @fc;
+}
+.underline-hover:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background: @c-blue-1;
+  transform: scale(0);
+  transition: all 0.3s;
+}
+.underline-hover:hover{
+  color: @c-green-green;
+  transition: all 0.3s;
+}
+.underline-hover:hover:before{
+  transform: scale(1);
 }

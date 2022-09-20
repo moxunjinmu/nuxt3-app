@@ -1,3 +1,10 @@
+/*
+ * @Author: moxunjingmu
+ * @Date: 2022-09-15 00:27:35
+ * @FilePath: \nuxt3-app\nuxt.config.ts
+ * @Description: 
+ * Copyright (c) 2022 by moxunjingmu 1786471868@qq.com, All Rights Reserved. 
+ */
 import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
@@ -20,6 +27,16 @@ export default defineNuxtConfig({
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  },
+  modules: [
+    '@unocss/nuxt',
+    '@nuxtjs/color-mode',
+  ],
+  unocss: {
+    preflight: true,
+  },
+  colorMode: {
+    classSuffix: '',
   },
   //main插件用于引入vue main.ts内容
   plugins: ['~/plugins/request','~/plugins/main'],

@@ -1,6 +1,6 @@
 @import './theme.less';
-@import './global.less';
 @import './main.less';
+@import './global.less';
 
 #demoApp{
   display: flex;
@@ -9,4 +9,18 @@
     // background-color: var(--vt-c-bg);
     transition: background-color .5s;
     // padding-top: var(--vt-banner-height);
+}
+
+a {
+  &:extend(.underline-hover);
+  &:before {
+    &:extend(.underline-hover:before);
+
+  }
+  &:hover{
+    &:extend(.underline-hover:hover);
+  }
+  &:hover:before{
+    &:extend(.underline-hover:hover:before);
+  }
 }

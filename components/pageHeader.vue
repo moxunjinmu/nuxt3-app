@@ -41,6 +41,11 @@
     width: 100%;
     display: grid;
     grid-template-columns: auto max-content;
+    .right{
+      display: grid;
+      grid-gap: 1.2rem;
+      grid-auto-flow: column;
+    }
   }
 }
 </style>
