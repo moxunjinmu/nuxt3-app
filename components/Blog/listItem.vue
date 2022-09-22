@@ -8,7 +8,7 @@
 <template>
   <article class="blog-list-item">
     <h4>
-      <a href="" >解决.gitignore忽略文件不生效问题</a>
+      <a href="/Blog/234234" >解决.gitignore忽略文件不生效问题</a>
     </h4>
     <div class="sub-title">
       <span>
