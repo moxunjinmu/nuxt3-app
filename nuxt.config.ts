@@ -29,9 +29,20 @@ export default defineNuxtConfig({
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   modules: [
+    '@nuxt/content',
     '@unocss/nuxt',
     '@nuxtjs/color-mode',
   ],
+  content: {
+    highlight: {
+      preload: [
+        'javascript',
+        'typescript',
+        'vue',
+        'vue-html'
+      ]
+    },
+  },
   unocss: {
     preflight: true,
   },
@@ -61,3 +72,4 @@ export default defineNuxtConfig({
     },
   }
 })
+
